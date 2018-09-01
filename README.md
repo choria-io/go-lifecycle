@@ -12,6 +12,7 @@ These lifecycle events are published to the `choria.lifecycle.event.<type>.<comp
 |-----|-----------|
 |Startup|Event to emit when components start, requires `Identity()`, `Component()` and `Version()` options|
 |Shutdown|Event to emit when components shut down, requires `Identity()` and `Component()` options|
+|Provisioned|Event to emit after provisioning of a component, requires `Identity()` and `Component()` options|
 
 #### Sample Events
 ### Schemas
@@ -41,6 +42,17 @@ Event Schemas are stored in the [Choria Schemas repository](https://github.com/c
 }
 ```
 
+#### Provisioned
+
+```json
+{
+    "protocol":"choria:lifecycle:provisioned:1",
+    "identity":"c1.example.net",
+    "component":"server",
+    "timestamp":1535369536
+}
+```
+
 ## Viewing events
 
 In a shell configured as a Choria Client run `choria tool event` to view events in real time.
@@ -59,7 +71,7 @@ err = lifecycle.PublishEvent(event, conn)
 
 If you are emitting `lifecycle.Shutdown` events right before exiting be sure to call `conn.Close()` so the buffers are flushed prior to shutdown.
 
-## Receiving a events
+## Receiving events
 
 These events are used to orchestrate associated tools like the [Provisioning Server](https://github.com/choria-io/provisioning-agent) that listens for these events and immediately add a new node to the provisioning queue.
 
