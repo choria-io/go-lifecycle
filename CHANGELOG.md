@@ -1,5 +1,7 @@
 |Date      |Issue |Description                                                                                              |
 |----------|------|---------------------------------------------------------------------------------------------------------|
+|2018/11/15|      |Release 0.2.1                                                                                            |
+|2018/10/27|10    |Support upcoming choria release in order to move to more secure uuid library                             |
 |2018/09/01|      |Release 0.2.0                                                                                            |
 |2018/09/01|7     |Add a `Provisioned` type event                                                                           |
 |2018/08/27|      |Release 0.1.0                                                                                            |
