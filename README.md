@@ -13,6 +13,7 @@ These lifecycle events are published to the `choria.lifecycle.event.<type>.<comp
 |Startup|Event to emit when components start, requires `Identity()`, `Component()` and `Version()` options|
 |Shutdown|Event to emit when components shut down, requires `Identity()` and `Component()` options|
 |Provisioned|Event to emit after provisioning of a component, requires `Identity()` and `Component()` options|
+|Alive|Event to emit at regular intervals indicating it's still functional, requires `Identity()`, `Component()` and `Version()` options|
 
 #### Sample Events
 ### Schemas
