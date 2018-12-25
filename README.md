@@ -6,6 +6,10 @@ These lifecycle events are published to the `choria.lifecycle.event.<type>.<comp
 
 [![GoDoc](https://godoc.org/github.com/choria-io/go-lifecycle?status.svg)](https://godoc.org/github.com/choria-io/go-lifecycle) [![CircleCI](https://circleci.com/gh/choria-io/go-lifecycle/tree/master.svg?style=svg)](https://circleci.com/gh/choria-io/go-lifecycle/tree/master)
 
+## Status
+
+This project is versioned using SemVer and have reached version 1.0.0, it's in use by several Choria projects and will follow SemVer rules in future.
+
 ## Supported Events
 
 |Event|Description|
@@ -51,6 +55,18 @@ Event Schemas are stored in the [Choria Schemas repository](https://github.com/c
     "identity":"c1.example.net",
     "component":"server",
     "timestamp":1535369536
+}
+```
+
+#### Alive
+
+```json
+{
+    "protocol":"choria:lifecycle:alive:1",
+    "identity":"c1.example.net",
+    "version":"0.6.0",
+    "timestamp":1535369537,
+    "component":"server"
 }
 ```
 
