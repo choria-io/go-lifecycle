@@ -1,1 +1,4 @@
 vendor
+cmd/cmd
+dist
+lifecycle/lifecycle

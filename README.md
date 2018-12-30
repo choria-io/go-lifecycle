@@ -72,7 +72,7 @@ Event Schemas are stored in the [Choria Schemas repository](https://github.com/c
 
 ## Viewing events
 
-In a shell configured as a Choria Client run `choria tool event` to view events in real time.
+In a shell configured as a Choria Client run `choria tool event` to view events in real time. You can also install the CLI found on our releases page and do `lifecycle view`.
 
 These events do not traverse Federation borders, so you have to view them in the network you care to observe.  You can though configure a Choria Adapter to receive them and adapt them onto a NATS Stream from where you can replicate them to other data centers.
 
@@ -116,3 +116,22 @@ for {
     }
 }
 ```
+
+## Tallying component versions
+
+In large dynamic fleets it's hard to keep track of counts and versions of nodes. A tool is included that can observe a running network and gather versions of a specific component.  The results are exposed as Prometheus metrics.
+
+```
+lifecycle --component server --port 8080 --prefix lifecycle_tally
+```
+
+This will listen on port 8080 for `/metrics`, it will observe events from the `server` component and expose metrics as below:
+
+|Metric|Description|
+|------|-----------|
+|lifecycle_tally_good_events|Events processed successfully|
+|lifecycle_tally_bad_events|Events that failed to process|
+|lifecycle_tally_versions|Gauge indicating the number of running components by version|
+|lifecycle_tally_maintenance_time|Time spent doing regular maintenance on the stored data|
+
+Here the prefix - `lifecycle_tally` - is what would be the default if you didn't specify `--prefix``.
