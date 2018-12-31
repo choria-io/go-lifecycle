@@ -122,16 +122,20 @@ for {
 In large dynamic fleets it's hard to keep track of counts and versions of nodes. A tool is included that can observe a running network and gather versions of a specific component.  The results are exposed as Prometheus metrics.
 
 ```
-lifecycle --component server --port 8080 --prefix lifecycle_tally
+lifecycle tally --component server --port 8080 --prefix lifecycle_tally
 ```
+
+For this to work it uses the normal Choria client configuration to connect to the right middleware using TLS and listen there, you'll .
 
 This will listen on port 8080 for `/metrics`, it will observe events from the `server` component and expose metrics as below:
 
 |Metric|Description|
 |------|-----------|
 |lifecycle_tally_good_events|Events processed successfully|
-|lifecycle_tally_bad_events|Events that failed to process|
+|lifecycle_tally_process_errors|The number of events received that failed to process|
+|lifecycle_tally_event_types|The number of events received by type|
 |lifecycle_tally_versions|Gauge indicating the number of running components by version|
 |lifecycle_tally_maintenance_time|Time spent doing regular maintenance on the stored data|
+|lifecycle_tally_processing_time|The time taken to process events|
 
-Here the prefix - `lifecycle_tally` - is what would be the default if you didn't specify `--prefix``.
+Here the prefix - `lifecycle_tally` - is what would be the default if you didn't specify `--prefix`.
