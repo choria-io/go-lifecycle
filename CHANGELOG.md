@@ -1,5 +1,7 @@
 |Date      |Issue |Description                                                                                              |
 |----------|------|---------------------------------------------------------------------------------------------------------|
+|2019/01/03|      |Release 1.0.1                                                                                            |
+|2019/01/03|31    |Correctly parse protocol strings                                                                         |
 |2019/01/03|      |Release 1.0.0                                                                                            |
 |2019/01/03|27    |Adds a unique tracking ID to each event                                                                  |
 |2019/01/03|25    |Move to `io.choria.lifecycle.v1.x` style protocol indicators                                             |
