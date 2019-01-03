@@ -28,7 +28,7 @@ Event Schemas are stored in the [Choria Schemas repository](https://github.com/c
 
 ```json
 {
-    "protocol":"choria:lifecycle:startup:1",
+    "protocol":"io.choria.lifecycle.v1.startup",
     "identity":"c1.example.net",
     "version":"0.6.0",
     "timestamp":1535369537,
@@ -40,7 +40,7 @@ Event Schemas are stored in the [Choria Schemas repository](https://github.com/c
 
 ```json
 {
-    "protocol":"choria:lifecycle:shutdown:1",
+    "protocol":"io.choria.lifecycle.v1.shutdown",
     "identity":"c1.example.net",
     "component":"server",
     "timestamp":1535369536
@@ -51,7 +51,7 @@ Event Schemas are stored in the [Choria Schemas repository](https://github.com/c
 
 ```json
 {
-    "protocol":"choria:lifecycle:provisioned:1",
+    "protocol":"io.choria.lifecycle.v1.provisioned",
     "identity":"c1.example.net",
     "component":"server",
     "timestamp":1535369536
@@ -62,7 +62,7 @@ Event Schemas are stored in the [Choria Schemas repository](https://github.com/c
 
 ```json
 {
-    "protocol":"choria:lifecycle:alive:1",
+    "protocol":"io.choria.lifecycle.v1.alive",
     "identity":"c1.example.net",
     "version":"0.6.0",
     "timestamp":1535369537,
