@@ -142,4 +142,10 @@ This will listen on port 8080 for `/metrics`, it will observe events from the `s
 |lifecycle_tally_maintenance_time|Time spent doing regular maintenance on the stored data|
 |lifecycle_tally_processing_time|The time taken to process events|
 
+Additionally this tool can also watch Choria Autonomous Agent events, today it supports transition events only:
+
+|Metric|Description|
+|------|-----------|
+|lifecycle_tally_machine_transition|Information about transition events handled by Choria Autonomous Agents|
+
 Here the prefix - `lifecycle_tally` - is what would be the default if you didn't specify `--prefix`.
