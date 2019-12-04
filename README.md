@@ -10,6 +10,12 @@ These lifecycle events are published to the `choria.lifecycle.event.<type>.<comp
 
 This project is versioned using SemVer and have reached version 1.0.0, it's in use by several Choria projects and will follow SemVer rules in future.
 
+## CloudEvents Version 1.0
+
+Optional support for receiving and producing events in the [CloudEvents](https://cloudevents.io/) format is supported.
+
+Received events are automatically handled, to publish an event in CloudEvents format set `event.SetFormat(lifecycle.CloudEventV1Format)` before publishing it. To convert an event to CloudEvent format use `lifecycle.ToCloudEventV1(event)`.
+
 ## Supported Events
 
 |Event|Description|
