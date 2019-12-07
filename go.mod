@@ -4,7 +4,7 @@ go 1.13
 
 require (
 	github.com/choria-io/go-choria v0.12.1
-	github.com/choria-io/go-config v0.0.4
+	github.com/choria-io/go-config v0.0.5
 	github.com/choria-io/go-srvcache v0.0.6
 	github.com/cloudevents/sdk-go v0.10.1
 	github.com/gofrs/uuid v3.2.0+incompatible
