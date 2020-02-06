@@ -1,5 +1,7 @@
 # Choria Lifecycle Events
 
+**This repository is now archived, code is now part of github.com/choria-io/go-choria**
+
 This package create and view Choria Lifecycle Events
 
 These lifecycle events are published to the `choria.lifecycle.event.<type>.<component>` topic structure of the middleware and contains small JSON documents that informs listeners about significant life cycle events of Choria components.
